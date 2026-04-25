@@ -1,0 +1,27 @@
+# AI Video Dubbing Server
+
+Backend server for AI-powered video dubbing and translation.
+
+## Features
+- Upload video files (up to 500MB)
+- Multi-language support
+- Voice type selection
+- Video shorts conversion
+
+## API Endpoints
+
+### POST /upload
+Upload a video for processing.
+
+**Parameters:**
+- `video` (file) - Video file to process
+- `lang` (string) - Target language code
+- `voice` (string) - Voice type (male/female)
+- `shorts` (boolean) - Convert to shorts format
+
+**Response:**
+```json
+{
+  "success": true,
+  "videoUrl": "output/filename.mp4"
+}
